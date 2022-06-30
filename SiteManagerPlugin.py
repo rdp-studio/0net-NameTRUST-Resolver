@@ -23,7 +23,7 @@ class SiteManagerPlugin(object):
 
     # Return: True if the address is .trust domain
     def istrustDomain(self, address):
-        return re.match(r"(.*?)([A-Za-z0-9_-]+\.trust)$", address)
+        return re.match(r"(.*?)([A-Za-z0-9_-]+\.trust)$", address) or re.match(r"(.*?)([A-Za-z0-9_-]+\.trusted)$", address)
 
     # Resolve domain
     # Return: The address or None
